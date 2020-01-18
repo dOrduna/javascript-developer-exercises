@@ -17,6 +17,17 @@ console.log('Go!')
 
 // PLACE YOUR CODE BELOW
 
+const pluralize = (baseString, count) => count === 1 ? baseString : `${baseString}s`;
+
+let waitTime = 1;
+
+wait(waitTime).then(() => {
+  console.log(`I waited ${waitTime} ${pluralize("second", waitTime)}`);
+  return wait(waitTime *= 3);
+}).then(() => {
+  console.log(`I waited ${waitTime} more ${pluralize("second", waitTime)}`);
+});
+
 // PLACE YOUR CODE ABOVE
 /*
 You console output should look like the following AND wait the

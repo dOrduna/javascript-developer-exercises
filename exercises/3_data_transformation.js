@@ -69,6 +69,11 @@ function convertRideshareArray(array) {
     */
     // PLACE YOUR CODE BELOW
 
+    return {
+      rideShareId: element.id,
+      numberMembers: element.members != null ? element.members.length : 0,
+    };
+
     // PLACE YOUR CODE ABOVE
   })
 

@@ -8,6 +8,15 @@ parameter passed to createGetFunction when it was called.
 function createGetFunction(elementToReturn) {
   // PLACE YOUR CODE BELOW
 
+  return function (elements) {
+    if (elements == null
+      || !Array.isArray(elements)
+      || elementToReturn <= 0
+      || elementToReturn > elements.length) {
+      return null;
+    }
+    return elements[elementToReturn - 1];
+  }
 
   // PLACE YOUR CODE ABOVE
 }
