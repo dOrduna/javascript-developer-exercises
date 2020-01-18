@@ -13,6 +13,17 @@ function paintMixer(color1, color2) {
   */
   // PLACE YOUR CODE BELOW
 
+  let mixResults = {
+    "blue_red": "purple",
+    "green_red": "brown",
+    "red_yellow": "orange",
+    "blue_yellow": "green"
+  };
+
+  let colorMix = [color1, color2].sort().join("_");
+
+  return mixResults.hasOwnProperty(colorMix) ? mixResults[colorMix] : "unknown";
+
   // PLACE YOUR CODE ABOVE
 }
 
